@@ -7,8 +7,9 @@ Resources Provided:
 * (Resource Dataset): `System/custom/Datastream Tokens`
 * (Metrics  Dataset): `System/custom/Ingest Metrics`
 * (Monitor w/ Email): `System/custom/Excessive Ingest Alert`
+* (Dashboard): `System/custom/Ingest by Token`
 
-Usage:
+**Usage**:
 ```
 module "ingest-monitoring" {
   # Must use HTTPS notation
