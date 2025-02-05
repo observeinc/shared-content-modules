@@ -18,9 +18,7 @@ resource "observe_monitor_v2" "excessive_ingest_alert" {
             type = "email"
 
             email {
-                addresses = [
-                    var.ingest_alert_recipients
-                ]
+                addresses = var.ingest_alert_recipients
                 fragments = jsonencode(
                     {
                         body  = <<-EOT
