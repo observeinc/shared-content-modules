@@ -6,7 +6,7 @@ resource "observe_monitor_v2" "excessive_ingest_alert" {
         "usage/License Ingest Events" = data.observe_dataset.license_events.oid
     }
     lookback_time            = "10m0s"
-    name                     = "usage/Excessive Ingest Alert"
+    name                     = "usage/custom/Excessive Ingest Alert"
     rule_kind                = "count"
     workspace                = var.workspace.oid
 
