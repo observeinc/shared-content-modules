@@ -115,7 +115,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-vf9f3tny"
                 input    = [
                     {
-                        datasetId   = observe_dataset.ingest_metrics.oid
+                        datasetId   = observe_dataset.ingest_metrics.id
                         datasetPath = null
                         inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                         inputRole   = "Data"
@@ -151,7 +151,7 @@ resource "observe_dashboard" "ingest_by_token" {
                     index              = 3
                     inputList          = [
                         {
-                            datasetId   = observe_dataset.ingest_metrics.oid
+                            datasetId   = observe_dataset.ingest_metrics.id
                             id          = "query-input-4hekxjka"
                             inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                             inputRole   = "Data"
@@ -256,7 +256,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-bdkcyw3p"
                 input    = [
                     {
-                        datasetId   = observe_dataset.ingest_metrics.oid
+                        datasetId   = observe_dataset.ingest_metrics.id
                         datasetPath = null
                         inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                         inputRole   = "Data"
@@ -292,7 +292,7 @@ resource "observe_dashboard" "ingest_by_token" {
                     index              = 4
                     inputList          = [
                         {
-                            datasetId   = observe_dataset.ingest_metrics.oid
+                            datasetId   = observe_dataset.ingest_metrics.id
                             id          = "query-input-dzvivfot"
                             inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                             inputRole   = "Data"
@@ -411,7 +411,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-2gn3k3nn"
                 input    = [
                     {
-                        datasetId   = observe_dataset.ingest_metrics.oid
+                        datasetId   = observe_dataset.ingest_metrics.id
                         datasetPath = null
                         inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                         inputRole   = "Data"
@@ -447,7 +447,7 @@ resource "observe_dashboard" "ingest_by_token" {
                     index              = 5
                     inputList          = [
                         {
-                            datasetId   = observe_dataset.ingest_metrics.oid
+                            datasetId   = observe_dataset.ingest_metrics.id
                             id          = "query-input-dzvivfot"
                             inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                             inputRole   = "Data"
@@ -566,7 +566,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-4xcn0an5"
                 input    = [
                     {
-                        datasetId   = observe_dataset.ingest_metrics.oid
+                        datasetId   = observe_dataset.ingest_metrics.id
                         datasetPath = null
                         inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                         inputRole   = "Data"
@@ -602,7 +602,7 @@ resource "observe_dashboard" "ingest_by_token" {
                     index              = 6
                     inputList          = [
                         {
-                            datasetId   = observe_dataset.ingest_metrics.oid
+                            datasetId   = observe_dataset.ingest_metrics.id
                             id          = "query-input-xawfk1p0"
                             inputName   = "uncompressed_bytes_from_System/custom/Ingest Metrics"
                             inputRole   = "Data"
@@ -707,7 +707,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-zp4rtom0"
                 input    = [
                     {
-                        datasetId   = observe_dataset.datastreams.oid
+                        datasetId   = observe_dataset.datastreams.id
                         datasetPath = null
                         inputName   = "System/custom/Datastreams"
                         inputRole   = "Data"
@@ -788,7 +788,7 @@ resource "observe_dashboard" "ingest_by_token" {
                                                 groupBy                = []
                                                 id                     = "datasetQueryExpression-mgc7o8lh"
                                                 inputSource            = {
-                                                    datasetId = observe_dataset.datastreams.oid
+                                                    datasetId = observe_dataset.datastreams.id
                                                 }
                                                 lookupActions          = []
                                                 noDataVisBindingUpdate = false
@@ -849,7 +849,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-opre1lbn"
                 input    = [
                     {
-                        datasetId   = observe_dataset.datastream_tokens.oid
+                        datasetId   = observe_dataset.datastream_tokens.id
                         datasetPath = null
                         inputName   = "System/custom/Datastream Tokens"
                         inputRole   = "Data"
@@ -999,7 +999,7 @@ resource "observe_dashboard" "ingest_by_token" {
                                                 groupBy                = []
                                                 id                     = "datasetQueryExpression-gq5alt68"
                                                 inputSource            = {
-                                                    datasetId = observe_dataset.datastream_tokens.oid
+                                                    datasetId = observe_dataset.datastream_tokens.id
                                                 }
                                                 invalidGroupBy         = []
                                                 lookupActions          = []
