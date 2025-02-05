@@ -25,11 +25,7 @@ resource "observe_dataset" "datastream_tokens" {
 
             # set_link done in Terraform
 
-            make_col
-                datastreamName:label(^Datastream)
-
             make_resource options(expiry:2h),
-                datastreamName,
                 tokenName,
                 primary_key(datastreamId, tokenId)
 
