@@ -14,12 +14,12 @@ resource "observe_dataset" "datastreams" {
         pipeline     = <<-EOT
             filter string(EXTRA.schema) = "billing_datastream"
             make_col
-                datastreamId:int64(FIELDS.datastream_id),
+                datastream_id:int64(FIELDS.datastream_id),
                 name:string(FIELDS.name)
 
             make_resource options(expiry: 2h),
                 name,
-                primary_key(datastreamId)
+                primary_key(datastream_id)
 
             set_label name
         EOT

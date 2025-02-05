@@ -49,18 +49,18 @@ resource "observe_link" "ingest_metrics_link" {
   label     = each.key
 
   for_each = {
-    # set_link "Datastream", datastreamId:@"System/custom/Datastreams".datastreamId
+    # set_link "Datastream", datastreamId:@"System/custom/Datastreams".datastream_id
     "Datastream" = {
       target = observe_dataset.datastreams.oid
-      fields = ["datastreamId"]
+      fields = ["datastream_id"]
     }
 
     # set_link "Token",
-    #  token_id:@"System/custom/Datastream Tokens".tokenId,
-    #  datastream_id:@"System/custom/Datastream Tokens".datastreamId
+    #  token_id:@"System/custom/Datastream Tokens".token_id,
+    #  datastream_id:@"System/custom/Datastream Tokens".datastream_id
     "Token" = {
       target = observe_dataset.datastream_tokens.oid
-      fields = ["token_id:tokenId", "datastream_id:datastreamId"]
+      fields = ["token_id", "datastream_id"]
     }
  }
 }

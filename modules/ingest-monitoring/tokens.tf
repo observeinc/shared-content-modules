@@ -17,19 +17,19 @@ resource "observe_dataset" "datastream_tokens" {
             filter (string(EXTRA.schema) = "authtoken")
             make_col
                 timestamp:BUNDLE_TIMESTAMP,
-                datastreamId:int64(FIELDS.datastream_id.Int64),
+                datastream_id:int64(FIELDS.datastream_id.Int64),
                 description:string(FIELDS.description),
                 kind:string(FIELDS.kind),
-                tokenName:string(FIELDS.name),
-                tokenId:string(FIELDS.token_id)
+                name:string(FIELDS.name),
+                token_id:string(FIELDS.token_id)
 
             // set_link done in Terraform
 
             make_resource options(expiry:2h),
-                tokenName,
-                primary_key(datastreamId, tokenId)
+                name,
+                primary_key(datastream_id, token_id)
 
-            set_label tokenName
+            set_label name
         EOT
     }
 }
@@ -42,10 +42,10 @@ resource "observe_link" "token_datastream_link" {
   label     = each.key
 
   for_each = {
-    # set_link "Datastream", datastreamId:@"System/custom/Datastreams".datastreamId
+    # set_link "Datastream", datastream_id:@"System/custom/Datastreams".datastream_id
     "Datastream" = {
       target = observe_dataset.datastreams.oid
-      fields = ["datastreamId"]
+      fields = ["datastream_id"]
     }
  }
 }
