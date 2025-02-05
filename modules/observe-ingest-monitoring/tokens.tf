@@ -7,7 +7,7 @@ resource "observe_dataset" "datastream_tokens" {
         "System/custom/Datastreams" = observe_dataset.datastreams.oid
         "System"                    = data.observe_dataset.system.oid
     }
-    name                  = "System/Custom/Datastream Tokens"
+    name                  = "System/custom/Datastream Tokens"
     workspace             = var.workspace.oid
 
     stage {
