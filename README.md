@@ -21,3 +21,24 @@ module "ingest-monitoring" {
   ]
 }
 ```
+
+## microsoft-windows-dashboards
+**Usage**:
+
+If using the dashboards with  `Add Data` / `Host Explorer` dataset:
+```
+cd microsoft-windows-dashboards
+cp datasets-for-host-explorer/datasets.tf .
+terraform init
+terraform plan
+terraform apply
+```
+
+If using the dashboards with  `Observe/Otel` agents / `Host Monitoring` dataset:
+```
+cd microsoft-windows-dashboards
+cp datasets-for-otel/datasets.tf .
+terraform init
+terraform plan
+terraform apply
+```
