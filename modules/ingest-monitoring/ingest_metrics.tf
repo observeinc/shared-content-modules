@@ -4,8 +4,8 @@ resource "observe_dataset" "ingest_metrics" {
     acceleration_disabled = false
     freshness             = "2m0s"
     inputs                = {
-        "System/custom/Datastream Tokens" = observe_dataset.datastream_tokens.oid
-        "System/custom/Datastreams"       = observe_dataset.datastreams.oid
+        "System/custom/Datastream Tokens" = data.observe_dataset.tokens.oid
+        "System/custom/Datastreams"       = data.observe_dataset.datastreams.oid
         "System"                          = data.observe_dataset.system.oid
     }
     name                  = "System/custom/Ingest Metrics"
@@ -51,7 +51,7 @@ resource "observe_link" "ingest_metrics_link" {
   for_each = {
     # set_link "Datastream", datastreamId:@"System/custom/Datastreams".datastream_id
     "Datastream" = {
-      target = observe_dataset.datastreams.oid
+      target = data.observe_dataset.datastreams.oid
       fields = ["datastream_id"]
     }
 
@@ -59,7 +59,7 @@ resource "observe_link" "ingest_metrics_link" {
     #  token_id:@"System/custom/Datastream Tokens".token_id,
     #  datastream_id:@"System/custom/Datastream Tokens".datastream_id
     "Token" = {
-      target = observe_dataset.datastream_tokens.oid
+      target = data.observe_dataset.datastream_tokens.oid
       fields = ["token_id", "datastream_id"]
     }
  }

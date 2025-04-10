@@ -707,7 +707,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-zp4rtom0"
                 input    = [
                     {
-                        datasetId   = observe_dataset.datastreams.id
+                        datasetId   = data.observe_dataset.datastreams.id
                         datasetPath = null
                         inputName   = "System/custom/Datastreams"
                         inputRole   = "Data"
@@ -849,7 +849,7 @@ resource "observe_dashboard" "ingest_by_token" {
                 id       = "stage-opre1lbn"
                 input    = [
                     {
-                        datasetId   = observe_dataset.datastream_tokens.id
+                        datasetId   = data.observe_dataset.tokens.id
                         datasetPath = null
                         inputName   = "System/custom/Datastream Tokens"
                         inputRole   = "Data"
