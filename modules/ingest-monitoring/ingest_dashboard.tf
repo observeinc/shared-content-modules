@@ -999,7 +999,7 @@ resource "observe_dashboard" "ingest_by_token" {
                                                 groupBy                = []
                                                 id                     = "datasetQueryExpression-gq5alt68"
                                                 inputSource            = {
-                                                    datasetId = observe_dataset.datastream_tokens.id
+                                                    datasetId = observe_dataset.tokens.id
                                                 }
                                                 invalidGroupBy         = []
                                                 lookupActions          = []
