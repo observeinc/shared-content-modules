@@ -788,7 +788,7 @@ resource "observe_dashboard" "ingest_by_token" {
                                                 groupBy                = []
                                                 id                     = "datasetQueryExpression-mgc7o8lh"
                                                 inputSource            = {
-                                                    datasetId = observe_dataset.datastreams.id
+                                                    datasetId = data.observe_dataset.datastreams.id
                                                 }
                                                 lookupActions          = []
                                                 noDataVisBindingUpdate = false
