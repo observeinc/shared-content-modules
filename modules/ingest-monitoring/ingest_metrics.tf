@@ -59,7 +59,7 @@ resource "observe_link" "ingest_metrics_link" {
     #  token_id:@"System/custom/Datastream Tokens".token_id,
     #  datastream_id:@"System/custom/Datastream Tokens".datastream_id
     "Token" = {
-      target = data.observe_dataset.datastream_tokens.oid
+      target = data.observe_dataset.tokens.oid
       fields = ["token_id", "datastream_id"]
     }
  }
