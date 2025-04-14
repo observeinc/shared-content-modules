@@ -675,7 +675,7 @@ resource "observe_dashboard" "ingest_by_token" {
                             isPinned      = false
                             opal          = [
                                 "align 1h, A_uncompressed_bytes_sum:avg(m(\"uncompressed_bytes\"))",
-                                "aggregate A_uncompressed_bytes_sum:sum(A_uncompressed_bytes_sum), group_by(^Token...)",
+                                "aggregate A_uncompressed_bytes_sum:sum(A_uncompressed_bytes_sum), group_by(^Datastream...)",
                             ]
                             type          = "unknown"
                         },
